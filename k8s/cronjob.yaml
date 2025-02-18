@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: pbs-exporter
+  namespace: pbs-exporter
+spec:
+  schedule: "*/30 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            app: pbs-exporter
+        spec:
+          containers:
+            - name: pbs-exporter
+              image: ghcr.io/irontec/pbs-exporter:latest
+              envFrom:
+                - secretRef:
+                    name: pbs-exporter-secret
+          restartPolicy: OnFailure
