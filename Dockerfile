@@ -6,3 +6,4 @@ RUN addgroup -g 10001 user \
     && adduser -H -D -u 10000 -G user user
 RUN apk add --quiet --no-cache bash curl jq
 USER user:user
+ADD pbs_exporter.sh /app/pbs_exporter.sh
