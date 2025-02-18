@@ -1,8 +1,8 @@
 # pbs-exporter
 
-## I no longer use proxmox backup server so development of this tool has ceased. Feel free to fork it
+Fork from https://github.com/rare-magma/pbs-exporter
 
-Bash script that uploads proxmox backup server API info to prometheus' pushgateway on a daily basis.
+The idea is to build and offer a Container Image and provide instructions to deploy in Kubernetes.
 
 ## Dependencies
 
@@ -18,6 +18,10 @@ Bash script that uploads proxmox backup server API info to prometheus' pushgatew
 - [Systemd Timers](https://www.freedesktop.org/software/systemd/man/systemd.timer.html)
 
 ## Installation
+
+### With Kubernetes
+
+TODO
 
 ### With Docker
 
